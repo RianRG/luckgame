@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+*::selection{
+    background-color: rgb(49, 30, 30);
+    color: white;
+}
+
+body{
+    background-color: rgb(51, 51, 51);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    padding: 20px;
+}
+
+.tempo{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    color: white;
+}
+
+article{
+    position: absolute;
+    top: 5%;
+    background-color: rgb(26, 26, 26);
+    width: 470px;
+    max-height: 0;
+    overflow: hidden;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article.animei{
+    max-height: 11.5vh;
+    padding: 20px;
+}
+
+article span{
+    color: white;
+    transition: .4s;
+    width: 95%;
+    text-align: center;
+}
+
+.quad{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 3.5rem;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.quad h3{
+    text-align: center;
+    font-size: 1.7rem;
+    color: white;
+}
+
+.quad input{
+    position: relative;
+    appearance: textfield;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    width: 100%;
+    color: white;
+    padding: 2px 4px;
+}
+
+.quad input:not(:placeholder-shown):invalid + label {
+    bottom: 50%;
+  }
+
+.quad input:focus + label,
+.quad input:valid + label{
+    bottom: 50%;
+}
+
+.quad label{
+    position: absolute;
+    bottom: 42%;
+    left: 4%;
+    pointer-events: none;
+    transition: .4s;
+    color: rgb(138, 160, 173);
+}
+
+.quad button{
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+    width: 50%;
+    border-radius: 40px;
+    padding: 4px 0;
+    cursor: pointer;
+    color: white;
+    transition: .4s;
+    font-weight: 600;
+}
+
+.quad button:hover{
+    width: 60%;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 4px grey, 0 8px rgb(34, 34, 34), 0 10px rgb(14, 14, 14);
+}
+
+@media (max-width: 486px){
+    article{
+        width: 90%;
+    }
+}
